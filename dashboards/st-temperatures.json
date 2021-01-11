@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.3.3"
+      "version": "7.3.6"
     },
     {
       "type": "panel",
@@ -75,7 +75,8 @@
       "fieldConfig": {
         "defaults": {
           "custom": {},
-          "links": []
+          "links": [],
+          "unit": "fahrenheit"
         },
         "overrides": []
       },
@@ -106,7 +107,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -138,14 +139,14 @@
         "buckets": null,
         "mode": "time",
         "name": null,
-        "show": false,
+        "show": true,
         "values": []
       },
       "yaxes": [
         {
           "$$hashKey": "object:19582",
           "decimals": null,
-          "format": "short",
+          "format": "fahrenheit",
           "label": "",
           "logBase": 1,
           "max": null,
@@ -172,7 +173,7 @@
       "colorMaps": [
         {
           "$$hashKey": "object:6752",
-          "color": "#CCC",
+          "color": "rgba(0, 0, 0, 0)",
           "text": "N/A"
         },
         {
@@ -705,6 +706,7 @@
       "metricNameColor": "#000000",
       "rangeMaps": [
         {
+          "$$hashKey": "object:3049",
           "from": "null",
           "text": "N/A",
           "to": "null"
@@ -777,6 +779,7 @@
       "useTimePrecision": false,
       "valueMaps": [
         {
+          "$$hashKey": "object:3047",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -792,7 +795,7 @@
       "colorMaps": [
         {
           "$$hashKey": "object:3056",
-          "color": "#CCC",
+          "color": "rgba(0, 0, 0, 0)",
           "text": "N/A"
         },
         {
@@ -1325,6 +1328,7 @@
       "metricNameColor": "#000000",
       "rangeMaps": [
         {
+          "$$hashKey": "object:5641",
           "from": "null",
           "text": "N/A",
           "to": "null"
@@ -1397,6 +1401,7 @@
       "useTimePrecision": false,
       "valueMaps": [
         {
+          "$$hashKey": "object:5639",
           "op": "=",
           "text": "N/A",
           "value": "null"
@@ -1439,5 +1444,5 @@
   "timezone": "",
   "title": "Temperatures",
   "uid": "lux4rd0labs_st_04",
-  "version": 9
+  "version": 13
 }
