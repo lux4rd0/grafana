@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.3.3"
+      "version": "7.3.6"
     },
     {
       "type": "datasource",
@@ -101,17 +101,17 @@
         "orientation": "auto",
         "reduceOptions": {
           "calcs": [
-            "mean"
+            "last"
           ],
           "fields": "",
           "values": false
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
-          "expr": "sum by (label) (smartthings_battery_battery_percent{instance=\"app04.tylephony.com\"})",
+          "expr": "sum by (label) (smartthings_battery_battery_percent)",
           "interval": "",
           "legendFormat": "{{label}}",
           "refId": "A"
@@ -124,6 +124,7 @@
       "type": "stat"
     }
   ],
+  "refresh": "10s",
   "schemaVersion": 26,
   "style": "dark",
   "tags": [
@@ -141,5 +142,5 @@
   "timezone": "",
   "title": "Battery Levels",
   "uid": "lux4rd0labs_st_01",
-  "version": 8
+  "version": 12
 }
