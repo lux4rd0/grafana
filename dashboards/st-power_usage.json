@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.3.3"
+      "version": "7.3.6"
     },
     {
       "type": "panel",
@@ -101,7 +101,7 @@
         "alertThreshold": true
       },
       "percentage": false,
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
@@ -193,5 +193,5 @@
   "timezone": "",
   "title": "Power Usage",
   "uid": "lux4rd0labs_st_03",
-  "version": 8
+  "version": 9
 }
