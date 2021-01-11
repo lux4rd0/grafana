@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "7.3.3"
+      "version": "7.3.6"
     },
     {
       "type": "panel",
@@ -76,15 +76,16 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "${DS_PROMETHEUS}",
-      "decimals": null,
+      "decimals": 1,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "unit": "fahrenheit"
         },
         "overrides": []
       },
-      "fill": 3,
-      "fillGradient": 1,
+      "fill": 1,
+      "fillGradient": 3,
       "gridPos": {
         "h": 15,
         "w": 12,
@@ -111,18 +112,24 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
-          "alias": "Humidity: Tyle 2nd Floor",
-          "yaxis": 2
+          "$$hashKey": "object:187",
+          "alias": "Setpoint: Tyle 1st Floor",
+          "fill": 0,
+          "fillGradient": 0,
+          "lines": true
         },
         {
-          "alias": "Humidity: Tyle 1st Floor",
-          "yaxis": 2
+          "$$hashKey": "object:194",
+          "alias": "Setpoint: Tyle 2nd Floor",
+          "fill": 0,
+          "fillGradient": 0,
+          "lines": true
         }
       ],
       "spaceLength": 10,
@@ -130,13 +137,13 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (label) (avg_over_time(smartthings_thermostat_thermostat_setpoint_degree_fahrenheit[30m]))",
+          "expr": "sum by (label) (smartthings_thermostat_thermostat_setpoint_degree_fahrenheit)",
           "interval": "",
           "legendFormat": "Setpoint: {{label}}",
           "refId": "A"
         },
         {
-          "expr": "sum by (label) (avg_over_time(smartthings_thermostat_temperature_degree_fahrenheit[30m]))",
+          "expr": "sum by (label) (avg_over_time(smartthings_thermostat_temperature_degree_fahrenheit[1h]))",
           "interval": "",
           "legendFormat": "Actual: {{label}}",
           "refId": "B"
@@ -164,8 +171,9 @@
       "yaxes": [
         {
           "$$hashKey": "object:7702",
+          "decimals": 0,
           "format": "fahrenheit",
-          "label": null,
+          "label": "",
           "logBase": 1,
           "max": null,
           "min": null,
@@ -693,15 +701,16 @@
       "dashLength": 10,
       "dashes": false,
       "datasource": "${DS_PROMETHEUS}",
-      "decimals": null,
+      "decimals": 1,
       "fieldConfig": {
         "defaults": {
-          "custom": {}
+          "custom": {},
+          "unit": "percent"
         },
         "overrides": []
       },
-      "fill": 4,
-      "fillGradient": 1,
+      "fill": 1,
+      "fillGradient": 3,
       "gridPos": {
         "h": 14,
         "w": 12,
@@ -728,16 +737,18 @@
         "alertThreshold": false
       },
       "percentage": false,
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "pointradius": 2,
       "points": false,
       "renderer": "flot",
       "seriesOverrides": [
         {
+          "$$hashKey": "object:292",
           "alias": "Humidity: Tyle 2nd Floor",
           "yaxis": 1
         },
         {
+          "$$hashKey": "object:293",
           "alias": "Humidity: Tyle 1st Floor",
           "yaxis": 1
         }
@@ -747,7 +758,7 @@
       "steppedLine": false,
       "targets": [
         {
-          "expr": "sum by (label) (avg_over_time(smartthings_relative_humidity_measurement_humidity_percent[30m]))",
+          "expr": "sum by (label) (avg_over_time(smartthings_relative_humidity_measurement_humidity_percent[3h]))",
           "interval": "",
           "legendFormat": "Humidity: {{label}}",
           "refId": "C"
@@ -792,11 +803,12 @@
       "yaxes": [
         {
           "$$hashKey": "object:7702",
+          "decimals": 0,
           "format": "percent",
-          "label": null,
+          "label": "",
           "logBase": 1,
-          "max": null,
-          "min": "0",
+          "max": "45",
+          "min": "25",
           "show": true
         },
         {
@@ -806,7 +818,7 @@
           "logBase": 1,
           "max": null,
           "min": null,
-          "show": true
+          "show": false
         }
       ],
       "yaxis": {
@@ -1294,7 +1306,7 @@
               },
               {
                 "color": "green",
-                "value": 75
+                "value": 55
               }
             ]
           },
@@ -1323,7 +1335,7 @@
         },
         "textMode": "auto"
       },
-      "pluginVersion": "7.3.3",
+      "pluginVersion": "7.3.6",
       "targets": [
         {
           "expr": "sum by (label) (avg_over_time(smartthings_battery_battery_percent{device_type_name=\"Enhanced Z-Wave Plus Thermostat with Temperature, Humidity and Auto Time setting\"}[30m]))",
@@ -1356,5 +1368,5 @@
   "timezone": "",
   "title": "Thermostats",
   "uid": "lux4rd0labs_st_05",
-  "version": 33
+  "version": 39
 }
