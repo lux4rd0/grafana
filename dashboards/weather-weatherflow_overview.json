@@ -54,7 +54,7 @@
       "tags": [
         "weatherflow"
       ],
-      "title": "Weatherflow",
+      "title": "WeatherFlow",
       "type": "dashboards"
     }
   ],
@@ -1418,7 +1418,7 @@
     ]
   },
   "timezone": "",
-  "title": "Weather - Weatherflow Overview",
+  "title": "Weather - WeatherFlow Overview",
   "uid": "lux4rd0labs_weatherflow_01",
   "version": 21
 }

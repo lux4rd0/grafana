@@ -65,7 +65,7 @@
       "tags": [
         "weatherflow"
       ],
-      "title": "Weatherflow",
+      "title": "WeatherFlow",
       "type": "dashboards"
     }
   ],
@@ -2638,7 +2638,7 @@
           {
             "matcher": {
               "id": "byName",
-              "options": "Weatherflow - Hub"
+              "options": "WeatherFlow - Hub"
             },
             "properties": [
               {
@@ -2673,7 +2673,7 @@
       "pluginVersion": "7.4.0",
       "targets": [
         {
-          "alias": "Weatherflow - Hub",
+          "alias": "WeatherFlow - Hub",
           "groupBy": [
             {
               "params": [
@@ -2704,7 +2704,7 @@
           "tags": []
         },
         {
-          "alias": "Weatherflow",
+          "alias": "WeatherFlow",
           "groupBy": [
             {
               "params": [
@@ -2899,7 +2899,7 @@
   },
   "timepicker": {},
   "timezone": "",
-  "title": "Weather - Weatherflow (Details/Live)",
+  "title": "Weather - WeatherFlow (Details/Live)",
   "uid": "lux4rd0labs_weatherflow_02",
   "version": 58
 }
